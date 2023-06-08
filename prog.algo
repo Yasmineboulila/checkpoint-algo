@@ -1,0 +1,27 @@
+ALGORITHM checkpoint algo
+VAR
+    i,j,k:INTEGER
+    ch:STRING
+    l:INTEGER :=0
+    w:INTEGER :=0
+    v:INTEGER :=0
+BEGIN
+    write("donner une phrase")
+    read(ch)
+    FOR i FROM 0 TO ch.length-1 STEP 1  DO
+        l=l+1
+    END_FOR
+    FOR j FROM 0 TO l-1 STEP 1  DO
+        IF (ch[i]=" " or ch[i]".") THEN
+            w=w+1
+        END_IF
+    END_FOR
+    FOR k FROM 0 TO l-1 STEP 1  DO
+        IF (ch[i]=a or ch[i]=o or ch[i]=e or ch[i]=u or ch[i]=i or ch[i]=y) THEN
+            v=v+1
+        END_IF
+    END_FOR
+    write("la longueur de la phrase =" ,l)  
+    write("le nombre des mots dans la phrase=",w)  
+    write("le nombre des voyelles dans la phrase=",v)
+END
